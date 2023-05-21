@@ -1,0 +1,571 @@
+@font-face {
+    font-family: digifont;
+    src: url(./../fonts/BYekan+.ttf);
+}
+@font-face {
+    font-family: digifont-bold;
+    src: url(../fonts/BYekan+\ Bold.ttf) format("tff");
+}
+
+:root {
+    --mainRed: #ef4056;
+    --mainBlack: black;
+    --maindark: #777;
+    --mainlink: #19bfd3;
+    --mainicon: #a1a3a8;
+    --mainwhite: #f0f0f1;
+    --mainborder: #e0e0e2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: digifont, sans-serif;
+    color: var(--mainBlack);
+}
+
+/* button {
+    text-transform: none;
+} */
+
+a {
+    text-decoration: none !important;
+    color: var(--mainBlack) !important;
+}
+
+a:hover {
+    color: var(--mainBlack) !important;
+}
+
+p {
+    font-size: 12px;
+}
+hr {
+    color: #a4a4a4;
+}
+
+/* start support */
+.support-btn {
+    z-index: 1500;
+    color: white;
+    background-color: var(--mainRed);
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 45px;
+    bottom: 10px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50%;
+    border: var(--mainRed);
+    cursor: pointer;
+}
+
+.online-support {
+    position: fixed;
+    background-color: white;
+    top: 28%;
+    left: 3%;
+    width: 23%;
+    height: 60%;
+    border: 1px solid var(--mainRed);
+    border-radius: 10px;
+    display: none;
+    z-index: 100;
+}
+
+.online-support-header {
+    outline: auto;
+    color: white;
+    background-color: var(--mainRed);
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid var(--mainRed);
+}
+
+.online-support-close {
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.online-support-container {
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black !important;
+    background-color: white !important;
+}
+
+.online-support-moreBTN button {
+    background-color: #19bfd3;
+    color: white;
+    border: none;
+    border-radius: 2.5rem;
+}
+
+.online-support-moreBTN button:hover {
+    background-color: #19bfd3;
+    color: white;
+}
+/* finish support */
+
+
+/* start header  */
+.navbar-search {
+    background-color: var(--mainwhite);
+    font-size: 15px;
+    width: 50%;
+    border-radius: 8%;
+    font-weight: bold;
+}
+.navbar-search-icon {
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.308);
+}
+.navbar-input {
+    background-color: var(--mainwhite);
+    font-weight: 200;
+    border: none;
+    height: 46px;
+}
+.navbar-input:focus {
+    background-color: var(--mainwhite);
+    border: none !important;
+}
+.nav-sign {
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    border-radius: 5px;
+}
+
+.nav-lies2 {
+    font-size: 13px;
+}
+
+.sign-icon {
+    color: var(--maindark);
+}
+.shop-icon {
+    color: var(--maindark);
+    font-size: 25px;
+    cursor: pointer;
+    padding-right: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.103);
+}
+
+.scrollnav {
+    position: fixed !important;
+    transition: top 0.5s ease-in-out !important;
+    width: 100%;
+    z-index: 111;
+}
+.scrollnav nav {
+    background-color: white;
+}
+
+.nav-up {
+    top: 0;
+}
+/* finish header */
+
+
+/* start carousel */
+
+/* Slideshow container */
+.sliders {
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.slider {
+    display: none;
+}
+.slider.active {
+    display: block;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 0 0 3px;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    direction: ltr;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* finish carousel */
+
+
+/* start subset */
+.subset-text {
+    font-size: 13px !important;
+}
+.subset-moreicon {
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+    color: #a1a3a8;
+    background-color: rgb(231, 231, 231);
+    border-radius: 50%;
+}
+.subset-box {
+    cursor: pointer;
+}
+/* finish subset */
+
+
+/* start offer */
+.offer-section {
+    background-color: var(--mainRed);
+    border-radius: 15px !important;
+    padding-left: 10px;
+    max-height: 330px;
+}
+.offer-first-img {
+    max-width: 152px;
+    max-height: 270px;
+}
+.offer-texts {
+    color: white;
+}
+.offer-item {
+    background-color: white;
+    margin: 0px 2px;
+}
+
+@media screen and (max-width: 1400px) {
+    .owl1 {
+        display: none;
+    }
+    .offer-slider-container {
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .owl1,
+    .owl2 {
+        display: none;
+    }
+    .offer-slider-container {
+        padding-right: 60px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .owl1,
+    .owl2,
+    .owl3 {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .owl1,
+    .owl2,
+    .owl3,
+    .owl4 {
+        display: none;
+    }
+}
+/* finish offer */
+
+
+/* start posters */
+.posters-item img {
+    border-radius: 16px;
+}
+/* finish posters */
+
+
+/* start banners */
+.banner-img img {
+    border-radius: 16px;
+}
+@media screen and (max-width: 992px) {
+    .banner-next {
+        margin-bottom: 2%;
+    }
+}
+/* finish banners */
+
+
+/* start suggestion */
+.suggestion-items {
+    margin: 0px 30px;
+    padding: 10px;
+    border: 1px solid var(--mainborder);
+    border-radius: 10px;
+}
+.suggestion-items-next {
+    border-bottom: 1px solid var(--mainborder);
+}
+.suggestion-item {
+    border-right: 1px solid var(--mainborder);
+}
+@media screen and (max-width: 576px) {
+    .suggestion-item {
+        border-right: none;
+        padding-bottom: 1%;
+    }
+}
+/* finish suggestion */
+
+
+/* start brands */
+.brands-all {
+    border: 1px solid var(--mainborder);
+    border-radius: 15px;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+.brands-item {
+    border-right: 1px solid var(--mainborder);
+}
+@media screen and (max-width: 1400px) {
+    .brands-item {
+        border: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .brands-all {
+        padding-left: 60px;
+    }
+}
+/* finish brands */
+
+
+/* start boxCategory */
+.boxCategory-container {
+    border: 1px solid var(--mainborder);
+    padding: 10px;
+    border-radius: 15px;
+}
+.boxCategory-item1 {
+    border-bottom: 1px solid var(--mainborder);
+    border-left: 1px solid var(--mainborder);
+}
+.boxCategory-item2 {
+    border-bottom: 1px solid var(--mainborder);
+}
+.boxCategory-item3 {
+    border-left: 1px solid var(--mainborder);
+}
+.boxCategory-mobile {
+    border-left: 1px solid var(--mainborder);
+}
+.boxCategory-toy {
+    border-left: 1px solid var(--mainborder);
+}
+.boxCategory-sofa {
+    border-left: 1px solid var(--mainborder);
+}
+
+.boxCategory-muted {
+    font-size: 12px;
+}
+/* finish boxCategory */
+
+
+/* start digiplus */
+.digiplus-container {
+    background-color: #941b80;
+    border-radius: 15px;
+}
+.digiplus-centerbtn:hover {
+    background-color: #941b80 !important;
+}
+.digiplus-srcondbox {
+    background-color: white;
+    border-radius: 15px;
+}
+/* finish digiplus */
+
+
+/* start digiclub */
+.digiclub-container {
+    background-image: linear-gradient(to right, rgb(53, 166, 200), rgb(0, 114, 149) 100%);
+    border-radius: 15px;
+}
+.digiclub-boxes {
+    background-color: white;
+    border-radius: 15px;
+}
+.digiclub-text p {
+    font-weight: bold;
+}
+/* finish digicclub */
+
+
+/* start best seller */
+.best-seller-text span {
+    color: #19bfd3;
+}
+.best-seller-all {
+    border: 1px solid var(--mainborder);
+    border-radius: 15px;
+}
+/* finish best seller */
+
+
+/* start footer  */
+.footer-Services-title p {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-thirdline {
+        display: none;
+    }
+}
+
+.footer-Fourthline a {
+    display: block;
+    font-size: 14px;
+}
+
+.socialmedia-links i {
+    font-size: 30px;
+    color: var(--mainicon);
+}
+
+@media screen and (max-width: 1024px) {
+    .socialmedia {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.subemail-input {
+    border: none;
+    background-color: transparent;
+}
+
+.footer-fifthline {
+    background-color: #3c4b6d;
+    color: white;
+    border-radius: 8px;
+}
+.footer-downloadlinks-item img {
+    height: 44px;
+    border-radius: 4px;
+}
+.footer-explains {
+    text-align: justify;
+}
+
+.footer-Certificate-img {
+    border: 1px solid var(--mainborder);
+    border-radius: 8px;
+}
+
+.showandhide {
+    display: none;
+}
+.footer-explains-hide {
+    display: none;
+}
+/* finish footer */
+
+
+/* start morelinks */
+.morelinks-container {
+    background-color: var(--mainwhite);
+}
+
+.morelinks-links {
+    width: 12%;
+    height: 80px;
+    border-right: 1px solid var(--mainborder);
+    border-bottom: 1px solid var(--mainborder);
+}
+
+@media screen and (max-width: 1024px) {
+    .morelinks-links {
+        width: 33%;
+    }
+}
+/* start morelinks */
